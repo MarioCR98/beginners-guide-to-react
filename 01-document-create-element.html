@@ -1,10 +1,15 @@
 <body>
+  <!-- this line is need it to create an interface with the user -->
   <div id="root"></div>
+  <!-- this line decide which lenguaje is going to be use-->
   <script type="text/javascript">
+    //Create an element to manage the root
     const rootElement = document.getElementById('root')
     const element = document.createElement('div')
+    // add properties of the element
     element.textContent = 'Hello World'
     element.className = 'container'
+    // add element created to the root
     rootElement.appendChild(element)
   </script>
 </body>
