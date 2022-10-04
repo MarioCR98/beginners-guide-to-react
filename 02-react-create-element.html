@@ -1,13 +1,17 @@
 <body>
   <div id="root"></div>
+  <!-- same example as before but this time using react -->
   <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script type="text/javascript">
     const rootElement = document.getElementById('root')
+    // In react we don't have to specify properties like before, creating elements
+    // we can add it as an object
     const element = React.createElement('div', {
       className: 'container',
       children: 'Hello World',
     })
+    // render "element" to the root, remember is defined in line 2 and 7
     ReactDOM.render(element, rootElement)
   </script>
 </body>
