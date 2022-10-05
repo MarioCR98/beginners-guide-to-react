@@ -4,11 +4,14 @@
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
+    //React help to refresh the content, but only the props, very useful
+    //make diff to compare and change only things that are different from last time
     const rootElement = document.getElementById('root')
-
+    // function to count seconds
     function tick() {
       const time = new Date().toLocaleTimeString()
       const element = (
+        //this is JSX
         <>
           <input readOnly value={time} />
           <input readOnly value={time} />
@@ -16,7 +19,7 @@
       )
       ReactDOM.render(element, rootElement)
     }
-
+    
     setInterval(tick, 1000)
   </script>
 </body>
