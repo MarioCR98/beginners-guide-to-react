@@ -5,15 +5,17 @@
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
     const rootElement = document.getElementById('root')
-
+    //function that will be change 
     const state = {eventCount: 0, username: ''}
 
     function App() {
       function handleClick() {
+        // call setState function and add 1 to the count
         setState({eventCount: state.eventCount + 1})
       }
-
+      //event is the input
       function handleChange(event) {
+        // username: is how change the value in state
         setState({username: event.target.value})
       }
 
@@ -30,7 +32,7 @@
         </div>
       )
     }
-
+    // this function render the app to make possible to see the changes
     function setState(newState) {
       Object.assign(state, newState)
       renderApp()

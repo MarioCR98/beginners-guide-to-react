@@ -6,6 +6,7 @@
   <script type="text/babel">
     function Greeting() {
       const [name, setName] = React.useState(
+        //with () make the call a function only activates it in the first render
         () => window.localStorage.getItem('name') || '',
       )
 

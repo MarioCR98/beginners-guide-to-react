@@ -11,6 +11,8 @@
 
       React.useEffect(() => {
         window.localStorage.setItem('name', name)
+        //this line make like a condition
+        //only render this function if name suffer a change
       }, [name])
 
       const handleChange = event => setName(event.target.value)

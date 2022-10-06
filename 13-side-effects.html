@@ -6,9 +6,12 @@
   <script type="text/babel">
     function Greeting() {
       const [name, setName] = React.useState(
+        //this line means that if the value is null will use ""
+        //bring the value from the local storage
         window.localStorage.getItem('name') || '',
       )
-
+      //this hooke make the variable be save in the local storage
+      // is call every time that greeting function is render
       React.useEffect(() => {
         window.localStorage.setItem('name', name)
       })

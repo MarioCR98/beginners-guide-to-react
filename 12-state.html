@@ -4,7 +4,10 @@
   <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
   <script type="text/babel">
+    //all this is only one function
+    //thats why use react.useState, save the last value, doesn't matter if the function was render again
     function Greeting() {
+      //save in two variables because first value is empty, second one is the one we need
       const [name, setName] = React.useState('')
       const handleChange = event => setName(event.target.value)
       return (
